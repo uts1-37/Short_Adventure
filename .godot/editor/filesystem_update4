@@ -1,0 +1,5 @@
+res://scenes/game.tscn
+res://scripts/coin.gd
+res://scripts/game_manager.gd
+res://default_bus_layout.tres
+res://scenes/coin.tscn

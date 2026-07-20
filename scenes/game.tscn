@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bru4evwh1s71o" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://4nare473nuc7" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="FontFile" uid="uid://bftvw7wmov14e" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://dfvwxu4y0nmxb" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cx354nuau1p2i" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cnmmuqfdirqy8" path="res://scenes/coin.tscn" id="4_lbhrr"]
@@ -216,7 +217,21 @@ _data = {
 [node name="Game" type="Node2D" unique_id=1569312903]
 
 [node name="GameManager" type="Node" parent="." unique_id=1272627707]
+unique_name_in_owner = true
 script = ExtResource("1_gee14")
+
+[node name="ScoreLable" type="Label" parent="GameManager" unique_id=1335200198]
+custom_maximum_size = Vector2(100, 30)
+offset_left = 1228.0
+offset_top = -25.0
+offset_right = 1328.0
+offset_bottom = -6.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0tnpc")
+theme_override_font_sizes/font_size = 8
+text = "You collected X coins "
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="TileMap" type="TileMap" parent="." unique_id=682163184]
 tile_set = SubResource("TileSet_ymh6p")
@@ -274,6 +289,9 @@ position = Vector2(1016, -168)
 [node name="Coin10" parent="Coin" unique_id=1438952873 instance=ExtResource("4_lbhrr")]
 position = Vector2(1112, -105)
 
+[node name="Coin11" parent="Coin" unique_id=907195705 instance=ExtResource("4_lbhrr")]
+position = Vector2(1321, 7)
+
 [node name="Platform" type="Node" parent="." unique_id=30430561]
 
 [node name="platform" parent="Platform" unique_id=1550711778 instance=ExtResource("3_lnu2h")]
@@ -320,6 +338,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
 text = "Hmm.."
+
+[node name="Label6" type="Label" parent="Lable" unique_id=1238522267]
+offset_left = 1265.0
+offset_top = -42.0
+offset_right = 1428.0
+offset_bottom = -30.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "You made it!"
 
 [node name="Label4" type="Label" parent="Lable" unique_id=291228004]
 offset_left = 544.0
